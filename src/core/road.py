@@ -4,7 +4,7 @@ import pygame
 from pygame.rect import Rect
 from pygame.surface import Surface
 
-from src.window import WIDTH, HEIGHT
+from src.core.window import WIDTH, HEIGHT
 
 LANES = 3
 STRIPE_WIDTH = 10

@@ -1,3 +1,4 @@
+from pygame import display
 from pygame.surface import Surface
 
 from src.entities.bike.bike import Bike
@@ -23,7 +24,10 @@ class EntityManager(object):
     def update(self, delta_time) -> None:
         self.all_entities.update(delta_time)
 
-    def render(self, surface: Surface) -> None:
+    def render(self, surface: Surface = None) -> None:
+        if surface is None:
+            surface = display.get_surface()
+
         self.all_entities.render(surface)
 
     def add_obstacle(self) -> None:

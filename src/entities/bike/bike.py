@@ -2,9 +2,9 @@ import pygame.image
 from pygame.rect import Rect
 from pygame.surface import Surface
 
-from src.window import box, WIDTH, HEIGHT
+from src.core.window import box, WIDTH, HEIGHT
 from src.entities.entity import Entity
-from src.utils.utils import load_file
+from src.utils.utils import get_file_path
 
 
 class Bike(Entity):
@@ -21,7 +21,7 @@ class Bike(Entity):
         self.life = 3
 
     def _load_image(self):
-        sprite = load_file(__file__, 'sprite.png')
+        sprite = get_file_path(__file__, 'sprite.png')
         image = pygame.image.load(sprite).convert_alpha()
         width, height = image.get_size()
 

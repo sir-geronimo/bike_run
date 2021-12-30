@@ -34,7 +34,6 @@ class EntityGroup(Group):
         super().update(delta_time)
 
     def render(self, surface: Surface):
-
         for entity in self.entities:
             entity.render(surface)
         super().draw(surface)
